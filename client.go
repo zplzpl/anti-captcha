@@ -1,4 +1,4 @@
-package anticaptcha
+package anti_captcha
 
 import (
 	"bytes"
@@ -149,7 +149,7 @@ func (c *Client) createTask(ctx context.Context, task interface{}) (taskId int64
 	}
 
 	if response.ErrorId != 0 {
-		err = fmt.Errorf("anticaptcha_error,apikey: %s, code: %s,description: %s", c.key, response.ErrorCode, response.ErrorDescription)
+		err = fmt.Errorf("anti_captcha_error,apikey: %s, code: %s,description: %s", c.key, response.ErrorCode, response.ErrorDescription)
 		return
 	}
 
@@ -209,7 +209,7 @@ func (c *Client) getTaskResult(ctx context.Context, taskId int64, dst interface{
 
 	if response.ErrorId != 0 {
 		ready = false
-		err = fmt.Errorf("anticaptcha_error,apikey: %s, code: %s,description: %s", c.key, response.ErrorCode, response.ErrorDescription)
+		err = fmt.Errorf("anti_captcha_error,apikey: %s, code: %s,description: %s", c.key, response.ErrorCode, response.ErrorDescription)
 		return
 	}
 
@@ -298,7 +298,7 @@ func (c *Client) GetBalance(ctx context.Context) (balance float64, err error) {
 	}
 
 	if response.ErrorId != 0 {
-		err = errors.New("anticaptcha: " + response.ErrorDescription)
+		err = errors.New("anti_captcha: " + response.ErrorDescription)
 		return
 	}
 
@@ -352,7 +352,7 @@ func (c *Client) ReportIncorrectImageCaptcha(ctx context.Context, taskId int64) 
 	}
 
 	if response.ErrorId != 0 {
-		err = errors.New("anticaptcha: " + response.ErrorDescription)
+		err = errors.New("anti_captcha: " + response.ErrorDescription)
 		return
 	}
 
@@ -404,7 +404,7 @@ func (c *Client) ReportIncorrectRecaptcha(ctx context.Context, taskId int64) (er
 	}
 
 	if response.ErrorId != 0 {
-		err = errors.New("anticaptcha: " + response.ErrorDescription)
+		err = errors.New("anti_captcha: " + response.ErrorDescription)
 		return
 	}
 

@@ -1,4 +1,4 @@
-package anticaptcha
+package anti_captcha
 
 import (
 	"testing"

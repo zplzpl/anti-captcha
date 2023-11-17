@@ -1,16 +1,16 @@
-package anticaptcha
+package anti_captcha
 
 import (
 	"context"
 	"net/url"
 )
 
-//HCaptchaResult is the api response from a hcaptcha task
+// HCaptchaResult is the api response from a hcaptcha task
 type HCaptchaResult struct {
 	GRecaptchaResponse string `json:"gRecaptchaResponse"`
 }
 
-//HCaptcha submits and retrieves a hcaptcha task
+// HCaptcha submits and retrieves a hcaptcha task
 func (c *Client) HCaptcha(ctx context.Context, siteURL, siteKey, userAgent string, proxy *url.URL, opts ...OptionalValue) (result HCaptchaResult, err error) {
 	var taskId int64
 	data := map[string]interface{}{
@@ -42,7 +42,7 @@ func (c *Client) HCaptcha(ctx context.Context, siteURL, siteKey, userAgent strin
 	return
 }
 
-//HCaptchaProxyless submits and retrieves a hcaptcha task
+// HCaptchaProxyless submits and retrieves a hcaptcha task
 func (c *Client) HCaptchaProxyless(ctx context.Context, siteURL, siteKey string, opts ...OptionalValue) (result HCaptchaResult, err error) {
 	var taskId int64
 	data := map[string]interface{}{
