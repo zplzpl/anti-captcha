@@ -18,6 +18,6 @@ func main() {
     
     balance, _ := client.GetBalance(context.Background())
     
-    fmt.Println(balance) // 4.77
+    fmt.Println(balance)
 }
 ```
