@@ -11,10 +11,10 @@ go get github.com/zplzpl/anti-captcha
 # Usage
 
 ```go
-import "github.com/zplzpl/anti-captcha"
+import "github.com/zplzpl/anti_captcha"
 
 func main() {
-    client := anti-captcha.NewClient("your-key-here")
+    client := anti_captcha.NewClient("your-key-here")
     
     balance, _ := client.GetBalance(context.Background())
     
