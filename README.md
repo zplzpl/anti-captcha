@@ -1,5 +1,23 @@
 # anti-captcha
-golang anti-captcha client package
 
+Go library for accessing the anti-captcha.com API
 
-Anti-capt
+# Install
+
+```go
+go get github.com/zplzpl/anti-captcha
+```
+
+# Usage
+
+```go
+import "github.com/zplzpl/anti-captcha"
+
+func main() {
+    client := anti-captcha.NewClient("your-key-here")
+    
+    balance, _ := client.GetBalance(context.Background())
+    
+    fmt.Println(balance) // 4.77
+}
+```
