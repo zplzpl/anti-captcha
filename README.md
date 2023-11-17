@@ -5,7 +5,7 @@ Go library for accessing the anti-captcha.com API
 # Install
 
 ```go
-go get github.com/zplzpl/anti-captcha
+go get github.com/zplzpl/anti_captcha
 ```
 
 # Usage
